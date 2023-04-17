@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+    --cinza100:#2b2d42;
+    --cinza50:#8d99ae;
+    --cinza25:#edf2f4;
+
+    --azul100:#3a86ff;
+    --azul50:#146eff;
+
+    --vermelho100: #d90429;
+    --vermelho50: #ef233c;
+
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -9,33 +25,28 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
     height: 100vh;
+    background-color: var(--cinza50);
 }
 
 .container {
-    background-color: aliceblue;
+    position: relative;
+    /* background-color: aliceblue; */
+    box-shadow: 10px 10px 20px #2b2d42a9;
     width: fit-content;
     padding: 1em;
-    border-radius: 10px;
+    border-radius: 25px;
     height: 600px;
     width: 400px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
+
 }
 
-
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 2em;
-    height: 100%;
-    
-}
 
 picture {
     margin: auto;
@@ -48,13 +59,47 @@ picture {
 
 /* Border animation */
 
+.container::before {
+    position: absolute;
+    content: "";
+    height: 750px;
+    width: 750px;
+    background-image: conic-gradient(transparent, transparent, transparent, transparent, #ed0c7b, #7400b8, #146eff);
+    animation: rotate 6s linear infinite;
 
+}
+
+/* .container::after {
+    position: absolute;
+    content: "";
+    height: 750px;
+    width: 750px;
+    background-image: conic-gradient(transparent, transparent, transparent, #ed0c7b);
+    animation: rotate 6s linear infinite;
+    animation-delay: -3s;
+
+} */
+
+
+.container section {
+    position: absolute;
+    height: 590px;
+    width: 390px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2em;
+}
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
     100% {
-        /* transform: rotate(360deg); */
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
     }
 }

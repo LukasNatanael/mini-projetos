@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+    --cinza100:#2b2d42;
+    --cinza50:#8d99ae;
+    --cinza25:#edf2f4;
+
+    --azul100:#3a86ff;
+    --azul50:#146eff;
+
+    --vermelho100: #d90429;
+    --vermelho50: #ef233c;
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 98vh;
+    background-color: var(--cinza25);
+}
+
+.container {
+    position: relative;
+    width: 340px;
+    height: 500px;
+    background-color: var(--cinza50);
+    background-color: transparent;
+    border-radius: 20px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    background-image: conic-gradient(transparent, transparent, transparent, var(--vermelho50));
+    animation: rotate 4s linear infinite;
+}
+
+.container::after {
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    background-image: conic-gradient(transparent, transparent, transparent, var(--azul50));
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+@keyframes rotate {
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+
+.container span {
+    position: absolute;
+    height: 480px;
+    width: 320px;
+    border-radius: 20px;
+    background-color: var(--cinza50);
+    z-index: 1;
+}
