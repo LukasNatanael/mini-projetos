@@ -5,21 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+    <!-- JS -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
 </head>
 <body>
-    <main>
-        <header>
+    <main class="container">
+        <section>
             <picture>
                 <img src="assets/imgs/light-little.png" alt="Logo">
             </picture>
-        </header>
-        <section>
-            <button>
-                Login
-            </button>
+            <div id="buttonDivLogin"></div> 
+            <div id="buttonDivRegister"></div> 
+            <picture>
+                <img src="assets/imgs/login.svg" alt="login image" class="svgImage">
+            </picture>
         </section>
+        <p id="fullName"></p>
+        <p id="sub"></p>
+        <p id="given_name"></p>
+        <p id="family_name"></p>
+        <p id="email"></p>
+        <p id="verifiedEmail"></p>
+        <!-- <figure>
+            <img id="picture" alt="user image">
+        </figure> -->
     </main>
+    <script src="assets/js/index.js"></script>
+</body>
 </body>
 </html>

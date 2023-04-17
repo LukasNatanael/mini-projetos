@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: turquoise;
+    padding: 3em 1em;
+    border-radius: 10px;
+    gap: 2em;
+
+}
+
+h1 {
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
